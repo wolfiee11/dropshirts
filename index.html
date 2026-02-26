@@ -66,7 +66,6 @@
         <div class="nav-links">
             <span onclick="showPage('shop')">Shop</span>
             <span onclick="showPage('journal')">Journal</span>
-            <span>Cart (0)</span>
         </div>
     </nav>
 
@@ -112,33 +111,32 @@
         </div>
     </div>
 
-<div id="journal" class="page">
-    <div style="padding: 80px 10%; max-width: 800px; margin: 0 auto; text-align: center;">
-        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; font-style: italic; margin-bottom: 30px;">The Story</h2>
-        
-        <div style="text-align: left; line-height: 1.8; color: #444; font-size: 16px;">
-            <p style="margin-bottom: 20px;">
-                My name is <strong>Anaf Tyfin Khan</strong>. I’m 14 years old, and I started <strong>DropShirts</strong> because I wanted to create something that didn't exist in my local market: 
-                a truly premium, heavyweight essential t-shirt.
-            </p>
-            <p style="margin-bottom: 20px;">
-                Living in Bangladesh, we are surrounded by garment manufacturing, yet finding that perfect boxy, thick-fabric fit is harder than it looks. I spent weeks researching 
-                GSM, sourcing the right cotton, and designing a minimalist look that speaks for itself.
-            </p>
-            <p style="margin-bottom: 20px;">
-                I’m starting this journey by selling to my inner circle—my friends. They are my first models and my biggest critics. When you receive a DropShirts package in our 
-                signature <strong>black matte mailer</strong>, know that it was packed by a 14-year-old with a vision to change the local streetwear game.
-            </p>
-            <p style="font-style: italic; margin-top: 40px; color: #111;">
-                — Anaf Tyfin Khan, Founder
-            </p>
+    <div id="journal" class="page">
+        <div style="padding: 80px 10%; max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; font-style: italic; margin-bottom: 30px;">The Story</h2>
+            
+            <div style="text-align: left; line-height: 1.8; color: #444; font-size: 16px;">
+                <p style="margin-bottom: 20px;">
+                    My name is <strong>Anaf Tyfin Khan</strong>. I’m 14 years old, and I started <strong>DropShirts</strong> because I wanted to create something that didn't exist in my local market: 
+                    a truly premium, heavyweight essential t-shirt.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    Living in Bangladesh, we are surrounded by garment manufacturing, yet finding that perfect boxy, thick-fabric fit is harder than it looks. I spent weeks researching 
+                    GSM, sourcing the right cotton, and designing a minimalist look that speaks for itself.
+                </p>
+                <p style="margin-bottom: 20px;">
+                    I’m starting this journey by selling to my inner circle—my friends. They are my first models and my biggest critics. When you receive a DropShirts package in our 
+                    signature <strong>black matte mailer</strong>, know that it was packed by a 14-year-old with a vision to change the local streetwear game.
+                </p>
+                <p style="font-style: italic; margin-top: 40px; color: #111;">
+                    — Anaf Tyfin Khan, Founder
+                </p>
+            </div>
+            
+            <div style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 40px;">
+                <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #888;">Narayanganj / 2024 / Est. 01</p>
+            </div>
         </div>
-        
-        <div style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 40px;">
-            <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #888;">Narayanganj / 2024 / Est. 01</p>
-        </div>
-    </div>
-</div>
         <div style="padding: 100px 5%; text-align: center;">
             <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem;">Coming Soon</h2>
             <p>Our editorial lookbook is in production.</p>
@@ -184,6 +182,11 @@
         </div>
     </div>
 
+    <footer>
+        <div>&copy; 2024 DROPSHIRTS.BD</div>
+        <div>Narayanganj, Bangladesh</div>
+    </footer>
+
     <script>
         function showPage(pageId) {
             document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -217,34 +220,5 @@
             }
         }
     </script>
-
-    <footer>
-        <div>&copy; 2024 DROPSHIRTS.BD</div>
-        <div>Narayanganj, Bangladesh</div>
-    </footer>
-
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-            window.scrollTo(0,0);
-        }
-
-        function openOrder(productName) {
-            document.getElementById('orderModal').style.display = 'flex';
-            document.getElementById('selectedItem').innerText = "Item: " + productName;
-            document.getElementById('formProduct').value = productName;
-        }
-
-        function closeOrder() {
-            document.getElementById('orderModal').style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('orderModal')) {
-                closeOrder();
-            }
-        }
-    </script>
 </body>
-</html>
+</html>                                                                                                           m,
