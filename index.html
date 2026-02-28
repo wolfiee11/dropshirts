@@ -3,223 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DropShirts | Premium Essentials</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    
+    <title>Premium 270 GSM Heavyweight | Streetwear Boutique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* BASE STYLES */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #111; line-height: 1.6; }
-        
-        /* NAVIGATION */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 30px 5%; position: sticky; top: 0; background: white; z-index: 1000; border-bottom: 1px solid #f5f5f5; }
-        .logo { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: bold; letter-spacing: -1px; }
-        .nav-links { display: flex; gap: 30px; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; font-weight: 600; }
-        .nav-links span { cursor: pointer; }
-
-        /* HERO SECTION */
-        .hero { height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; background: #f9f9f9; margin-bottom: 50px; }
-        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 400; font-style: italic; }
-
-        /* PRODUCT GRID */
-        .page { display: none; }
-        .active { display: block; }
-        .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 0 5%; margin-bottom: 100px; }
-
-        .product-card { position: relative; transition: all 0.3s ease; }
-        .img-box { position: relative; overflow: hidden; background: #f5f5f5; aspect-ratio: 3/4; }
-        .img-box img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
-        .product-card:hover img { transform: scale(1.05); }
-
-        /* QUICK ADD BUTTON */
-        .quick-add { position: absolute; bottom: -60px; left: 0; width: 100%; background: rgba(255,255,255,0.95); padding: 20px; text-align: center; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; transition: bottom 0.3s ease; cursor: pointer; border-top: 1px solid #eee; }
-        .product-card:hover .quick-add { bottom: 0; }
-
-        /* PRODUCT META */
-        .product-meta { padding: 15px 0; display: flex; justify-content: space-between; font-size: 13px; letter-spacing: 0.5px; }
-        .price { color: #111; font-weight: 600; }
-
-        /* ORDER MODAL (POPUP) */
-        #orderModal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:2000; align-items:center; justify-content:center; }
-        .modal-content { background:white; padding:40px; width:95%; max-width:400px; border-radius:2px; position:relative; }
-        .close-btn { position:absolute; top:15px; right:20px; cursor:pointer; font-size: 20px; }
-        
-        form input, form select, form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #eee; font-family: 'Inter', sans-serif; font-size: 14px; }
-        .submit-btn { width: 100%; background: #111; color: white; padding: 15px; border: none; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; font-weight: 600; }
-        .submit-btn:hover { background: #333; }
-
-        /* FOOTER */
-        footer { padding: 50px 5%; border-top: 1px solid #eee; font-size: 11px; color: #888; text-transform: uppercase; letter-spacing: 1px; display: flex; justify-content: space-between; }
-
-        /* MOBILE RESPONSIVE */
-        @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { 
-            .grid { grid-template-columns: 1fr; } 
-            .hero-content h1 { font-size: 2.5rem; }
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+        .bento-card { background: white; border-radius: 24px; padding: 24px; transition: transform 0.3s ease; border: 1px solid #eee; }
+        .bento-card:hover { transform: translateY(-5px); }
+        .acid-wash-gradient { background: linear-gradient(135deg, #444, #222); color: white; }
     </style>
 </head>
-<body>
+<body class="text-slate-900 p-4 md:p-10">
 
-    <nav>
-        <div class="logo">DROPSHIRTS</div>
-        <div class="nav-links">
-            <span onclick="showPage('shop')">Shop</span>
-            <span onclick="showPage('journal')">Journal</span>
-        </div>
-    </nav>
+    <header class="max-w-6xl mx-auto mb-10 flex justify-between items-center">
+        <h1 class="text-2xl font-black tracking-tighter uppercase">Drop Studio.</h1>
+        <span class="bg-black text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">2026 Collection</span>
+    </header>
 
-    <div id="shop" class="page active">
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Heavyweight Essentials</h1>
+    <main class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+        
+        <div class="md:col-span-2 md:row-span-2 bento-card flex flex-col justify-between overflow-hidden relative">
+            <div>
+                <span class="text-rose-600 font-bold text-sm uppercase tracking-wider">New Arrival</span>
+                <h2 class="text-4xl font-black mt-2 leading-none">270 GSM<br>HEAVYWEIGHT</h2>
+                <p class="text-slate-500 mt-4 max-w-xs text-sm">Engineered with a luxury-grade boxy fit and reinforced ribbing. This isn't just a tee; it's structure.</p>
             </div>
-        </section>
-
-        <div class="grid">
-            <div class="product-card">
-                <div class="img-box">
-                    <img src="images/bone.jpg" alt="Bone Shirt">
-                    <div class="quick-add" onclick="openOrder('Bone Heavyweight')">Order Now</div>
-                </div>
-                <div class="product-meta"><span>Bone</span><span class="price">৳650</span></div>
-            </div>
-
-            <div class="product-card">
-                <div class="img-box">
-                    <img src="images/black.jpg" alt="Black Shirt">
-                    <div class="quick-add" onclick="openOrder('Black Heavyweight')">Order Now</div>
-                </div>
-                <div class="product-meta"><span>Black</span><span class="price">৳650</span></div>
-            </div>
-
-            <div class="product-card">
-                <div class="img-box">
-                    <img src="images/mist.jpg" alt="Mist Shirt">
-                    <div class="quick-add" onclick="openOrder('Mist Heavyweight')">Order Now</div>
-                </div>
-                <div class="product-meta"><span>Mist</span><span class="price">৳650</span></div>
-            </div>
-
-            <div class="product-card">
-                <div class="img-box">
-                    <img src="images/heather.jpg" alt="Heather Shirt">
-                    <div class="quick-add" onclick="openOrder('Heather Heavyweight')">Order Now</div>
-                </div>
-                <div class="product-meta"><span>Heather</span><span class="price">৳650</span></div>
+            <div class="mt-8 bg-slate-100 rounded-xl aspect-square flex items-center justify-center text-slate-400 italic">
+                [ Main 270 GSM Product Image ]
             </div>
         </div>
-    </div>
 
-    <div id="journal" class="page">
-        <div style="padding: 80px 10%; max-width: 800px; margin: 0 auto; text-align: center;">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; font-style: italic; margin-bottom: 30px;">The Story</h2>
-            
-            <div style="text-align: left; line-height: 1.8; color: #444; font-size: 16px;">
-                <p style="margin-bottom: 20px;">
-                    My name is <strong>Anaf Tyfin Khan</strong>. I’m 14 years old, and I started <strong>DropShirts</strong> because I wanted to create something that didn't exist in my local market: 
-                    a truly premium, heavyweight essential t-shirt.
-                </p>
-                <p style="margin-bottom: 20px;">
-                    Living in Bangladesh, we are surrounded by garment manufacturing, yet finding that perfect boxy, thick-fabric fit is harder than it looks. I spent weeks researching 
-                    GSM, sourcing the right cotton, and designing a minimalist look that speaks for itself.
-                </p>
-                <p style="margin-bottom: 20px;">
-                    I’m starting this journey by selling to my inner circle—my friends. They are my first models and my biggest critics. When you receive a DropShirts package in our 
-                    signature <strong>black matte mailer</strong>, know that it was packed by a 14-year-old with a vision to change the local streetwear game.
-                </p>
-                <p style="font-style: italic; margin-top: 40px; color: #111;">
-                    — Anaf Tyfin Khan, Founder
-                </p>
-            </div>
-            
-            <div style="margin-top: 60px; border-top: 1px solid #eee; padding-top: 40px;">
-                <p style="font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #888;">Narayanganj / 2024 / Est. 01</p>
-            </div>
+        <div class="bento-card flex flex-col justify-center items-center text-center">
+            <span class="text-slate-400 text-xs uppercase font-bold">Exclusive Price</span>
+            <div class="text-5xl font-black my-2">650 <small class="text-lg">BDT</small></div>
+            <p class="text-xs text-slate-500">Premium Quality / Limited Batch</p>
         </div>
-        <div style="padding: 100px 5%; text-align: center;">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 2rem;">Coming Soon</h2>
-            <p>Our editorial lookbook is in production.</p>
+
+        <div class="bento-card">
+            <h3 class="font-bold mb-4 text-sm uppercase">Available Colors</h3>
+            <div class="flex gap-3">
+                <div class="w-10 h-10 rounded-full bg-black border-2 border-slate-200 cursor-pointer" title="Black"></div>
+                <div class="w-10 h-10 rounded-full bg-[#3e2723] cursor-pointer" title="Coffee"></div>
+                <div class="w-10 h-10 rounded-full bg-[#800000] cursor-pointer" title="Maroon"></div>
+            </div>
+            <p class="mt-4 text-[10px] text-slate-400 uppercase tracking-tighter">Solid & Acid Washed Variants</p>
         </div>
-    </div>
 
-    <div id="orderModal">
-        <div class="modal-content">
-            <span class="close-btn" onclick="closeOrder()">✕</span>
-            <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 10px;">Order Details</h2>
-            <p id="selectedItem" style="font-size: 11px; text-transform: uppercase; color: #888; margin-bottom: 25px;"></p>
+        <div class="md:col-span-2 bento-card acid-wash-gradient relative overflow-hidden">
+            <div class="relative z-10">
+                <h3 class="text-2xl font-black uppercase">Acid Washed Drop</h3>
+                <p class="text-slate-300 text-sm mt-2">Unique marble texture on every single piece. Hand-finished vintage aesthetics.</p>
+                <button class="mt-6 bg-white text-black px-6 py-2 rounded-full font-bold text-sm hover:bg-slate-200 transition">View Collection</button>
+            </div>
+            <div class="absolute right-[-20px] bottom-[-20px] opacity-20 text-9xl font-black italic select-none">VINTAGE</div>
+        </div>
 
-            <form action="https://formspree.io/f/mjgeljel" method="POST">
-                <input type="hidden" name="Product" id="formProduct">
-                
-                <label style="font-size: 10px; font-weight: bold; text-transform: uppercase;">Select Size</label>
-                <select name="Size" required>
-                    <option value="M">Medium (M)</option>
-                    <option value="L">Large (L)</option>
-                    <option value="XL">Extra Large (XL)</option>
-                </select>
-
-                <label style="font-size: 10px; font-weight: bold; text-transform: uppercase;">Payment Method</label>
-                <select name="Payment_Method" id="payMethod" onchange="checkBkash()" required>
-                    <option value="Cash on Delivery">Cash on Delivery (COD)</option>
-                    <option value="bKash">bKash (Send Money)</option>
-                </select>
-
-                <div id="bkashNote" style="display:none; background: #fdf1f6; padding: 15px; border: 1px solid #e2136e; margin-bottom: 15px; border-radius: 4px;">
-                    <p style="font-size: 12px; color: #e2136e; font-weight: bold; margin-bottom: 5px;">bKash Personal: 01677051185</p>
-                    <p style="font-size: 10px; color: #555; line-height: 1.4;">
-                        Please <strong>Send Money</strong> (৳650 + Delivery). <br>
-                        Include your <strong>Name</strong> as Reference.
-                    </p>
+        <div class="bento-card md:col-span-2">
+            <h3 class="font-bold mb-4 text-sm uppercase">Quick Delivery</h3>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center border-b pb-2">
+                    <span class="text-sm font-medium">Narayanganj</span>
+                    <span class="font-bold text-slate-700">80 BDT</span>
                 </div>
-
-                <input type="text" name="Name" placeholder="Full Name" required>
-                <input type="tel" name="Phone" placeholder="Phone Number" required>
-                <textarea name="Address" placeholder="Delivery Address (Thana/Area + City)" required></textarea>
-                
-                <button type="submit" class="submit-btn">Confirm Order</button>
-            </form>
+                <div class="flex justify-between items-center border-b pb-2">
+                    <span class="text-sm font-medium">Dhaka City</span>
+                    <span class="font-bold text-slate-700">120 BDT</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <span class="text-sm font-medium">Rest of Country</span>
+                    <span class="font-bold text-slate-700">150 BDT</span>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <footer>
-        <div>&copy; 2024 DROPSHIRTS.BD</div>
-        <div>Narayanganj, Bangladesh</div>
+        <div class="md:col-span-4 bento-card bg-black text-white flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h3 class="text-2xl font-bold italic">Secure your piece.</h3>
+                <p class="text-slate-400 text-sm">Pre-booking open for 270 GSM Acid Wash series.</p>
+            </div>
+            <a href="https://wa.me/YOUR_NUMBER" class="bg-white text-black px-10 py-4 rounded-full font-black uppercase tracking-widest hover:scale-105 transition shadow-xl">
+                Order on WhatsApp
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="max-w-6xl mx-auto mt-20 text-center text-slate-400 text-xs pb-10">
+        &copy; 2026 DROP STUDIO CLOTHING. BUILT FOR THE STREETS.
     </footer>
 
-    <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-            window.scrollTo(0,0);
-        }
-
-        function openOrder(productName) {
-            document.getElementById('orderModal').style.display = 'flex';
-            document.getElementById('selectedItem').innerText = "Item: " + productName;
-            document.getElementById('formProduct').value = productName;
-        }
-
-        function closeOrder() {
-            document.getElementById('orderModal').style.display = 'none';
-        }
-
-        function checkBkash() {
-            var method = document.getElementById('payMethod').value;
-            var note = document.getElementById('bkashNote');
-            if (method === 'bKash') {
-                note.style.display = 'block';
-            } else {
-                note.style.display = 'none';
-            }
-        }
-
-        window.onclick = function(event) {
-            if (event.target == document.getElementById('orderModal')) {
-                closeOrder();
-            }
-        }
-    </script>
 </body>
-</html>                                                                                                           m,
-
+</html>
